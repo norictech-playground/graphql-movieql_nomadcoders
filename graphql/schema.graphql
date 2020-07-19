@@ -1,11 +1,9 @@
-type Person {
+type movie {
     id: Int!,
     name: String!,
-    age: Int!,
-    gender: String!
 }
 
 type Query {
-    people: [Person]!
-    person(id: Int!): Person
+    movies: [movie]!
+    movie(id: Int!): movie
 }

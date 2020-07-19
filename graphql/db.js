@@ -1,13 +1,21 @@
-export const people = [
+const movies = [
   {
     id: "1",
-    name: "Noric",
-    age: 24,
-    gender: "Male",
+    name: "Naruto",
   },
 ];
 
-export const getById = id => {
-  const filteredPeople = people.filter(person => person.id === String(id))
-  return filteredPeople[0]
+const getById = id => {
+  const filteredMovies = movies.filter(movie => movie.id === String(id))
+  return filteredMovies[0]
+}
+
+const deleteMovie = () => {
+  // 
+}
+
+export { 
+  movies, 
+  getById, 
+  deleteMovie 
 }
