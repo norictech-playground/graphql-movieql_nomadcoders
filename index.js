@@ -1,5 +1,10 @@
 import { GraphQLServer } from 'graphql-yoga'
+import resolvers from './graphql/resolvers'
 
-const server = new GraphQLServer({})
+const typeDefs = 'graphql/schema.graphql'
 
-server.start(() => console.log(`Server running`))
+const server = new GraphQLServer({
+    typeDefs, resolvers
+})
+
+server.start(() => console.log(`Server running`)) // default port 4000
